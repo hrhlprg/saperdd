@@ -51,7 +51,7 @@ dependencies:
   dio:
   http:
   firebase_instance_id: ^1.1.0
-  firebase_messaging: ^14.7.10
+  # firebase_messaging: ^14.7.10
 
 dev_dependencies:
   flutter_test:
