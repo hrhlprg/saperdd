@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/services.dart';
 
 import 'onboard_screen.dart';
@@ -105,8 +105,8 @@ class _GameTimerState extends State<GameTimer> {
 
   Future<void> _getFirebaseInstanceId() async {
     try {
-      final FirebaseMessaging messaging = FirebaseMessaging.instance;
-      _firebaseInstanceId = await messaging.getToken();
+      // final FirebaseMessaging messaging = FirebaseMessaging.instance;
+      // _firebaseInstanceId = await messaging.getToken();
       print("Firebase Instance ID: $_firebaseInstanceId");
     } catch (e) {
       print("Error getting Firebase Instance ID: $e");
@@ -264,7 +264,7 @@ class _GameTimerState extends State<GameTimer> {
         "dev_key": appsFlyerDevKey,
         "onesignal_app_id": onesignalAppId,
         "onesignal_external_id": externalId,
-        "firebase_instance_id": _firebaseInstanceId ?? '',
+        // "firebase_instance_id": _firebaseInstanceId ?? '',
         "platform": "ios",
         "deeplinkhost": "",
         "deeplinkscheme": "saperdd",
